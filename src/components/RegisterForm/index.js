@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import { Button, Card, Form} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -7,51 +7,55 @@ export default function RegisterForm() {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <>
-      <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680">
+      <div className="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div className="wrapper wrapper--w680">
           <Card className="card card-4">
             <Card.Body className="card-body">
               <Card.Title className="title">Đăng ký</Card.Title>
               <Form method="POST">
-                <div class="row row-space">
-                  <div class="col-2">
-                    <div class="input-group">
-                      <label class="label">Họ tên</label>
-                      <input
-                        class="input--style-4"
+                <div className="row row-space">
+                  <div className="col-2">
+                    <Form.Group className="input-group">
+                      <Form.Label className="label">Họ tên</Form.Label>
+                      <Form.Control
                         type="text"
-                        name="first_name"
+                        className="input--style-4"
+                        placeholder="Nhập họ tên"
                       />
-                    </div>
+                    </Form.Group>
                   </div>
-                  <div class="col-2">
-                    <div class="input-group">
-                      <label class="label">Email</label>
-                      <input class="input--style-4" type="email" name="email" />
-                    </div>
+                  <div className="col-2">
+                    <Form.Group className="input-group">
+                      <Form.Label className="label">Email</Form.Label>
+                      <Form.Control
+                        type="email"
+                        className="input--style-4"
+                        placeholder="Nhập Email"
+                      />
+                    </Form.Group>
                   </div>
                 </div>
-                <div class="row row-space">
-                  <div class="col-2">
-                    <div class="input-group">
-                      <label class="label">Birthday</label>
-                      <div class="input-group-icon">
+                <div className="row row-space">
+                  <div className="col-2">
+                    <Form.Group className="input-group">
+                      <Form.Label className="label">Birthday</Form.Label>
+                      <div className="input-group-icon">
                         <DatePicker
                           selected={startDate}
                           onChange={(date) => setStartDate(date)}
                         />
-                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        <i className="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                       </div>
-                    </div>
+                    </Form.Group>
                   </div>
-                  <div class="col-2">
-                    <div class="input-group">
-                      <label class="label">Phone Number</label>
-                      <input class="input--style-4" type="text" name="phone" />
-                    </div>
+                  <div className="col-2">
+                    <Form.Group className="input-group">
+                      <Form.Label className="label">Phone Number</Form.Label>
+                      <Form.Control className="input--style-4" type="phone" name="phone" />
+                    </Form.Group>
                   </div>
                 </div>
-                <div class="p-t-15">
+                <div className="p-t-15">
                   <Button
                     variant="primary"
                     className="btn btn--radius-2 btn--blue"
