@@ -51,7 +51,7 @@ export default function RegisterForm() {
                   <div className="col-2">
                     <Form.Group className="input-group">
                       <Form.Label className="label">Phone Number</Form.Label>
-                      <Form.Control className="input--style-4" type="phone" name="phone" />
+                      <Form.Control className="input--style-4" type="phone" name="phone" placeholder="Nhập vào số điện thoại" />
                     </Form.Group>
                   </div>
                 </div>
